@@ -20,14 +20,14 @@
   <p align="center">
     Empezando con la API RES!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Ver los documentos »</strong></a>
+    <a href="https://github.com/josarta/challengemeli"><strong>Ver los documentos »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">Swagger</a>
+    <a href="https://github.com/josarta/challengemeli">Swagger</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Test Api</a>
+    <a href="https://github.com/josarta/challengemeli">Test Api</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/josarta/challengemeli">Report Bug</a>
   </p>
 </p>
 
@@ -38,24 +38,25 @@
   <summary>Table de contenidos</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Vision General </a>
+      <a href="#Vision General">Vision General </a>
       <ul>
-        <li><a href="#built-with">Detalle del challenge 🧑‍💻</a></li>
+        <li><a href="#Desafío">Desafío 🧑‍💻</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Empezando</a>
+      <a href="#Empezando">Empezando</a>
       <ul>
-        <li><a href="#prerequisites">Prerrequisitos ‍🔧</a></li>
-        <li><a href="#installation">Instalación 💿</a></li>
+        <li><a href="#Tecnología y otras bibliotecas de código abierto">Tecnología y otras bibliotecas de código abierto ‍🔧</a></li>
+        <li><a href="Herramientas y servicios externos">Herramientas y servicios externos 📌 </a></li>  
+        <li><a href="#Instalación">Instalación 💿</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Ejecutando las pruebas📑</a></li>
-    <li><a href="#roadmap">Despliegue ✔️</a></li>
-    <li><a href="#contributing">Construido con 💪</a></li>
+    <li><a href="#Ejecutando las pruebas">Ejecutando las pruebas📑</a></li>
+    <li><a href="#Despliegue">Despliegue ✔️</a></li>
+    <li><a href="#The End">The End 🖇️💪</a></li>
     <li><a href="#license">Versionado 🔥</a></li>
     <li><a href="#contact">Autores 😎</a></li>
-    <li><a href="#acknowledgements">Gratitud 🙏 </a></li>
+    <li><a href="#Expresiones de Gratitud ">Expresiones de Gratitud  🙏 </a></li>
   </ol>
 </details>
 
@@ -94,18 +95,211 @@ Una vez analizado el enunciado 👀,se generon varias hipótesis para solución.
 
 El desarrollo se realizó con el IDE intelliJIDEA el proyecto construido con Spring Initializr para spring boot.
 
-### Prerequisites
+### Tecnología y otras bibliotecas de código abierto ‍🔧
+Server - Backend
 
+* [JDK ](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)  - Java™ Platform, Standard Edition Development Kit
+* [Spring Boot ](https://spring.io/projects/spring-boot)  -  Marco para facilitar el arranque y el desarrollo de nuevas aplicaciones Spring
+* [Maven ](https://maven.apache.org/)  - Gestión de dependencias
+* [unit testing](https://www.guru99.com/unit-testing-guide.html) Se realizan solo pruebas unitarias con una cobertura de código esperada del 85% o superior.
 
-* npm
+Libraries and Plugins
+
+* [Swagger](https://swagger.io/) Marco de software de código abierto respaldado por un gran ecosistema de herramientas que ayuda a los desarrolladores a diseñar, construir, documentar y consumir servicios web RESTful.
+    * Para agregar una dependencia "Swagger" usando Maven, use lo siguiente:
   ```sh
-  npm install npm@latest -g
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+  ```
+* [Algoritmo Levenberg–Marquardt](https://github.com/lemmingapex/trilateration) Conocido como el método de mínimos cuadrados amortiguados ( DLS ), se utiliza para resolver problemas de mínimos cuadrados no lineales.
+* Para agregar una dependencia "lemmingapex/trilateration" usando Maven, use lo siguiente:
+  ```sh
+        <dependency>
+            <groupId>com.lemmingapex.trilateration</groupId>
+            <artifactId>trilateration</artifactId>
+            <version>1.0.2</version>
+        </dependency>
   ```
 
-### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+### Herramientas y servicios externos 📌
+* [Postman ](https://www.postman.com/)  - Entorno de desarrollo de API (documentación de prueba)
+
+### Instalación
+#### Ejecutando la aplicación con IDE
+Aquí hay varias formas de ejecutar una aplicación Spring Boot en su máquina local. Una forma es ejecutar el método principal en la clase com.meli.challenge.ChallengeApplication desde su IDE.
+
+1. Descarga el zip o clona el repositorio de Git.
+2. Descomprime el archivo zip (si descargaste uno).
+3. Abra el símbolo del sistema y cambie el directorio (cd) a la carpeta que contiene pom.xml.
+4. Abra Eclipse. (IDE)
+    1. File -> Import -> Existing Maven Project -> Navega a la carpeta donde descomprimiste el zip
+    2. Seleccione el proyecto
+5. Elija el archivo de la aplicación Spring Boot (Buscar for @SpringBootApplication)
+6. Haga clic derecho en el archivo y ejecutar como aplicación Java.
+#### Ejecutando la aplicación con Maven
+Alternativamente, puede usar el [complemento Spring Boot Maven ](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins.html#build-tool-plugins-maven-plugin/) así:
+```sh
+$ git clone https://github.com/Spring-Boot-Framework/Spring-Boot-Application-Template.git
+$ cd Challenge-Application
+$ mvn spring-boot:run
+  ```
+#### Ejecutando la aplicación con el ejecutable JAR
+El código también se puede construir en un jar y luego ejecutar / ejecutar. Una vez que el jar está construido, ejecútelo haciendo doble clic en él o usando el comando
+ ```sh
+  $ git clone https://github.com/josarta/challengemeli.git
+  $ cd Challenge-Application
+  $ mvn package -DskipTests
+  $ java -jar target/Challenge-0.0.1-SNAPSHOT.jar --spring.profiles.active=test
+   ```
+
+
+<!-- USAGE EXAMPLES -->
+## Ejecutando las pruebas📑
+
+Ejemplos de cómo se puede utilizar un proyecto. Capturas de pantalla, Ejemplos de código y las demostraciones adicionales.
+
+Ingrese a la API usando `Swagger`
+   ```JS
+    http://localhost:8080/swagger-ui.html
+   ```
+
+![Product Name Screen Shot][all-screenshot]
+
+Vista general de la documentación
+
+### Responde a :
+ ```JS
+   func GetMessage(messages ...[]string) (msg string)  
+ ```
+
+
+![Product Name Screen Shot][message-controller]
+
+Objeto  getMessageRequest `*(body) getMessageRequest`
+   ```JS
+   {
+    "messages":[
+        ["este", "", "", "mensaje", ""],
+        ["", "es", "", "", "secreto"],
+        ["este", "", "un", "", ""]
+    ]
+}
+   ```
+Requerida en el Nivel 1 del Challenge
+
+### Responde a :
+ ```JS
+    // input: distancia al emisor tal cual se recibe en cada satélite
+    // output: las coordenadas ‘x’ e ‘y’ del emisor del mensaje
+    func GetLocation(distances ...float32) (x, y float32)
+
+```
+
+
+![Product Name Screen Shot][ship-controller]
+
+Objeto  getMessageRequest `*(body) getShipRequest`
+   ```JS
+  {
+    "coordinates":[
+        {
+            "name":"sato",
+            "distance" : 142.7
+        }, {
+            "name":"skywalker",
+            "distance" : 115.5
+        },{
+            "name":"kenobi",
+            "distance" : 100.0
+        }
+    ]
+}
+   ```
+Requerida en el Nivel 1 del Challenge
+
+### Responde a :
+ ```JS
+    Crear una API REST, hostear esa API en un cloud computing libre (Google App Engine,
+    Amazon AWS, etc), crear el servicio /topsecret/ en donde se pueda obtener la ubicación de
+    la nave y el mensaje que emite.
+```
+
+
+![Product Name Screen Shot][satellite-controller]
+
+Objeto  getMessageRequest `*(body) getSharedRequest /topsecret`
+   ```JS
+  {
+    "satellites": [
+        {
+            "name": "kenobi",
+            "distance": 150.0,
+            "message": ["este", "", "", "oki", ""]
+        },{
+            "name": "skywalker",
+            "distance": 115.5,
+            "message": ["", "es", "", "", "secreto"]
+        },{
+            "name": "sato",
+            "distance": 142.7,
+            "message": ["este", "", "un", "", ""]
+        }
+    ]
+}
+
+   ```
+Requerida en el Nivel 2 del Challenge
+
+
+### Responde a :
+ ```JS
+Crear un nuevo servicio /topsecret_split/ que acepte POST y GET. En el GET la
+respuesta deberá indicar la posición y el mensaje en caso que sea posible determinarlo y tener
+la misma estructura del ejemplo del Nivel 2. Caso contrario, deberá responder un mensaje de
+error indicando que no hay suficiente información.
+
+```
+
+![Product Name Screen Shot][satellite-split-controller]
+
+![Product Name Screen Shot][satellite-split-get]
+
+Objeto  getSharedRequest `*(body) getSatelliteResponsee /topsecret_split/{name} `
+   ```JS
+   {
+    "distance": 100.0,
+        "message": ["este", "es", "un", "mensaje", "ok"]
+}
+   ```
+
+
+![Product Name Screen Shot][satellite-split-post]
+
+Objeto  getSharedRequest `*(body) getSatelliteResponsee /topsecret_split/{name} `
+   ```JS
+   {
+    "distance": 100.0,
+        "message": ["este", "es", "un", "mensaje", "ok"]
+}
+   ```
+_Para obtener más ejemplos, consulte la [API Documentacion](http://localhost:8080/swagger-ui.html)_
+
+
+
+<!-- ROADMAP -->
+## Despliegue
+
+1. Clone el repositorio
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
    ```
@@ -118,53 +312,43 @@ El desarrollo se realizó con el IDE intelliJIDEA el proyecto construido con Spr
    const API_KEY = 'ENTER YOUR API';
    ```
 
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
 
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## The End 🖇️💪
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Al final, espero que haya disfrutado de la aplicación y la haya encontrado útil, como lo hice yo cuando la estaba desarrollando.
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 
 
 <!-- LICENSE -->
-## Licencia
+## Licencia 📄
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Este proyecto está bajo la Licencia (josarta) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
 
 
 <!-- CONTACT -->
 ## Contacto
 
-Jose Luis Sarta Alvarez - [@josarta](https://twitter.com/josarta) - josarta@misena.edu.co
+![Product Name Screen Shot][dv-photo]
+
+Jose Luis Sarta Alvarez ++🍺☕ - [@josarta](https://twitter.com/josarta) - josarta@misena.edu.co
 
 Swagger Api : [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
+## Expresiones de Gratitud 🎁
 
-# Empezando
+* Comenta a otros sobre este proyecto 📢
+* Invita una cerveza 🍺 o un café ☕ a alguien de tu equipo.
+* Da las gracias públicamente 🤓.
+* etc.
+
+## Empezando
 
 ### Documentación de referencia
 
@@ -202,4 +386,13 @@ Las siguientes guías ilustran cómo utilizar algunas funciones de forma concret
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.PNG
+[product-screenshot]: images/screenshot.png
+[all-screenshot]: images/Captura.PNG
+[message-controller]: images/Captura1.PNG
+[satellite-controller]: images/Captura2.PNG
+[satellite-split-controller]: images/Captura3.PNG
+[satellite-split-get]: images/Captura3-1.PNG
+[satellite-split-post]: images/Captura3-2.PNG
+[ship-controller]: images/Captura4.PNG
+[Models-controller]: images/Modelos.PNG
+[dv-photo]: images/dv.jpg
