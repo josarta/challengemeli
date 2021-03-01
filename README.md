@@ -405,8 +405,6 @@ Cada vez que se acepta un pull request realiza una acción de validación e inte
 
 Al final 🖇️💪, espero que haya disfrutado de la aplicación y la haya encontrado útil, como lo hice yo cuando la estaba desarrollando.
 
-1. Fork the Project
-
 
 <!-- CONTACT -->
 ## Autor
