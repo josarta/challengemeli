@@ -20,14 +20,14 @@
   <p align="center">
     Empezando con la API RES!
     <br />
-    <a href="https://github.com/josarta/challengemeli"><strong>Ver los documentos »</strong></a>
+    <a href="https://github.com/josarta/challengemeli" target="_blank"><strong>Ver los documentos »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/josarta/challengemeli">Swagger</a>
+    <a href="https://mellich.azurewebsites.net/swagger-ui.html" target="_blank">Swagger</a>
     ·
-    <a href="https://github.com/josarta/challengemeli">Test Api</a>
+    <a href="https://github.com/josarta/challengemeli" target="_blank">Test Api</a>
     ·
-    <a href="https://github.com/josarta/challengemeli">Report Bug</a>
+    <a href="https://github.com/josarta/challengemeli" target="_blank">Report Bug</a>
   </p>
 </p>
 
@@ -52,11 +52,14 @@
       </ul>
     </li>
     <li><a href="#Ejecutando las pruebas">Ejecutando las pruebas📑</a></li>
-    <li><a href="#Despliegue">Despliegue ✔️</a></li>
+    <li><a href="#Versionado">Versionado 🔥</a></li>
+    <li><a href="#Despliegue">Despliegue ✔️</a></li>    
+    <li><a href="#CI/CU">CI/CD ⚙️</a></li>
     <li><a href="#The End">The End 🖇️💪</a></li>
-    <li><a href="#license">Versionado 🔥</a></li>
-    <li><a href="#contact">Autores 😎</a></li>
+    <li><a href="#Autor">Autor 😎</a></li>
+    <li><a href="#Licencia">Licencia 📄</a></li>
     <li><a href="#Expresiones de Gratitud ">Expresiones de Gratitud  🙏 </a></li>
+    <li><a href="#Extras">Extras ⭐ ⭐ ⭐ ⭐ ⭐ </a></li>
   </ol>
 </details>
 
@@ -164,7 +167,7 @@ El código también se puede construir en un jar y luego ejecutar / ejecutar. Un
 
 
 <!-- USAGE EXAMPLES -->
-## Ejecutando las pruebas📑
+## Ejecutando las pruebas
 
 Ejemplos de cómo se puede utilizar un proyecto. Capturas de pantalla, Ejemplos de código y las demostraciones adicionales.
 
@@ -297,49 +300,128 @@ _Para obtener más ejemplos, consulte la [API Documentacion](http://localhost:80
 
 
 <!-- ROADMAP -->
+
+
+
 ## Despliegue
 
 1. Clone el repositorio
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/josarta/challengemeli.git
    ```
-3. Install NPM packages
+2. Test servidor local sobre la aplicación.
    ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
+   java -jar challenge-0.0.1-SNAPSHOT.jar
    ```
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+![dpSb Name Screen Shot][spring-boot-deploy]
+
+3. Acceder a él con cualquier navegador introduciendo la siguiente dirección:
+   ```JS
+     http://localhost:8080
+   ```
+### Azure 🤦‍♂️
+## IntelliJ DEA + Docker
+Utilize Docker para ejecutar una aplicación en un contenedor con un entorno de ejecución específico. por medio de  Dockerfile para ejecutar una aplicación Java simple en un contenedor con OpenJDK 8. 
+
+```java
+        #De la imagen que partimos
+        FROM openjdk:8-jre-alpine 
+       
+        RUN apk add --no-cache tzdata
+        ENV TZ='America/Lima'
+        RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+        RUN apk --update add fontconfig ttf-dejavu
+
+        #Directorio de trabajo
+        WORKDIR /
+
+        RUN mkdir app && chmod 777 app
+
+        COPY target/challenge-0.0.1-SNAPSHOT.jar /app
+        WORKDIR /app
+
+        #Exponemos el puerto 8080
+        EXPOSE 8080
+
+        #Comando que se ejecutara, una vez ejecutemos el contendor
+        CMD ["java","-jar","challenge-0.0.1-SNAPSHOT.jar"]
+```
+
+Publicación de mi contenedor en Azure.
+![azure Name Screen Shot][azure-container]
+
+
+## Versionado
+
+En este desafío utilizo Githup por las siguientes razones versionar tu código, aprender y experimentar, contribuir, trabajo en equipo, compatibilidad.
+
+![Git Name Screen Shot][git-photo]
+
+###Ramificaciones en Git 🧨
+
+![Ramas Name Screen Shot][ramas-photo]
+
+En este proyecto integro un flujo de trabajo vasado en ramas de desarrollo y maestras, trabaje dos ramas con el fin de registrar el historial del desafío, la rama master almacena el historial de publicación oficial y la rama desarrollo sirve como rama de integración para fusiones.
+Una nueva función es developcicu como rama única, que se envia al repositorio central “develop” para copia de seguridad/colaboración. Sin embargo, en vez de ramificarse de la maestra, estas ramas de función utilizan la de desarrollo como rama primaria.
+Estas funciones no interactuan directamente con la maestra, ya cuando todo esta ok, realizo un pullrequest con la master.
+
+![Gitci Name Screen Shot][gitci-photo]
+
+Cada vez que se acepta un pull request realiza una acción de validación e integracion con Docker.
+
+![Gitwf Name Screen Shot][gitwf-photo]
+
+
+<!-- LICENSE -->
+## CI/CD
+ 1 - Se realizan test y pruebas de forma local de igual forma se crea el contenedor Localmente.
+
+![Dk Name Screen Shot][dk-photo]
+
+ 2 - Cada PullRequest se activa una compilación de la imagen de Docker de la API de challenge en Docker Hub
+
+![gh Name Screen Shot][gd-photo]
+
+![Tgh Name Screen Shot][tgd-photo]
+
+ 3 - Se publica en Docker hub.
+   ```docker
+      docker build -t mychallenge.azurecr.io/challenge:latest .
+      docker images
+      docker run –d –p 8080:3000 mychallenge.azurecr.io/challenge:latest
+      docker login mychallenge.azurecr.io
+      docker push mychallenge.azurecr.io/challenge:latest 
+   ```
+ 4 - Azure Container Instances / despliegue continuo. `Flujo de trabajo`
+
+![Ol Name Screen Shot][ol-photo]
 
 
 
 <!-- CONTRIBUTING -->
-## The End 🖇️💪
+## The End
 
-Al final, espero que haya disfrutado de la aplicación y la haya encontrado útil, como lo hice yo cuando la estaba desarrollando.
-
-1. Fork the Project
-
-
-
-<!-- LICENSE -->
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (josarta) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
+Al final 🖇️💪, espero que haya disfrutado de la aplicación y la haya encontrado útil, como lo hice yo cuando la estaba desarrollando.
 
 
 <!-- CONTACT -->
-## Contacto
+## Autor
 
 ![Product Name Screen Shot][dv-photo]
 
 Jose Luis Sarta Alvarez ++🍺☕ - [@josarta](https://twitter.com/josarta) - josarta@misena.edu.co
 
-Swagger Api : [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Swagger Api : [https://mellich.azurewebsites.net/swagger-ui.html](https://mellich.azurewebsites.net/swagger-ui.html)
+
+
+<!-- LICENSE -->
+## Licencia 
+
+Este proyecto está bajo la Licencia (josarta) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+
+
 
 ## Expresiones de Gratitud 🎁
 
@@ -396,3 +478,13 @@ Las siguientes guías ilustran cómo utilizar algunas funciones de forma concret
 [ship-controller]: images/Captura4.PNG
 [Models-controller]: images/Modelos.PNG
 [dv-photo]: images/dv.jpg
+[git-photo]: images/git.PNG
+[ramas-photo]: images/git-ramas.PNG
+[gitci-photo]: images/gitci.PNG
+[gitwf-photo]: images/gitwf.PNG
+[spring-boot-deploy]: images/spring-boot-EN-5.jpg
+[azure-container]:images/azure-container-registry.png
+[dk-photo]:images/dk.png
+[ol-photo]:images/OldModel.png
+[gd-photo]:images/gdocker.png
+[tgd-photo]:images/triggerGh.png
