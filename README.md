@@ -77,12 +77,12 @@ Esta Api es mi solución plantea  al prueba Operación Fuego de Quasar, del cual
 * El servicio de inteligencia rebelde ha detectado un llamado de auxilio de una nave porta carga imperial a la deriva en un campo de asteroides. El manifiesto de la nave es ultra clasificado, pero se rumorea que transporta raciones y armamento para una legión entera.
 
 
-### Desafío 😵‍💫
+### Desafío
 
 Como jefe de comunicaciones rebelde, tu misión es crear un programa en Golang que retorne
 la fuente y contenido del mensaje de auxilio. Para esto, cuentas con tres satélites que te
 permitirán triangular la posición, ¡pero cuidado! el mensaje puede no llegar completo a cada
-satélite debido al campo de asteroides frente a la nave.
+satélite debido al campo de asteroides frente a la nave. 😵‍💫
 
 Una vez analizado el enunciado 👀,se generon varias hipótesis para solución. 🧙‍♀ 🎰 🎱 🎲 🔮 ✨
 
@@ -94,12 +94,12 @@ Una vez analizado el enunciado 👀,se generon varias hipótesis para solución.
 
 
 <!-- GETTING STARTED -->
-## Empezando 📋
+## Empezando
 
-El desarrollo se realizó con el IDE intelliJIDEA el proyecto construido con Spring Initializr para spring boot.
+El desarrollo se realizó con el IDE intelliJIDEA el proyecto construido con Spring Initializr para spring boot. 📋
 
-### Tecnología y otras bibliotecas de código abierto ‍🔧
-Server - Backend
+### Tecnología y otras bibliotecas de código abierto
+Server - Backend  ‍🔧
 
 * [JDK ](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)  - Java™ Platform, Standard Edition Development Kit
 * [Spring Boot ](https://spring.io/projects/spring-boot)  -  Marco para facilitar el arranque y el desarrollo de nuevas aplicaciones Spring
@@ -134,8 +134,8 @@ Libraries and Plugins
   ```
 
 
-### Herramientas y servicios externos 📌
-* [Postman ](https://www.postman.com/)  - Entorno de desarrollo de API (documentación de prueba)
+### Herramientas y servicios externos 
+* [Postman ](https://www.postman.com/)  📌 - Entorno de desarrollo de API (documentación de prueba)
 
 ### Instalación
 #### Ejecutando la aplicación con IDE
@@ -430,7 +430,8 @@ Este proyecto está bajo la Licencia (josarta) - mira el archivo [LICENSE.md](LI
 * Da las gracias públicamente 🤓.
 * etc.
 
-## Empezando
+
+## Extras
 
 ### Documentación de referencia
 
@@ -451,7 +452,6 @@ Las siguientes guías ilustran cómo utilizar algunas funciones de forma concret
 * [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
 * [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 * [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
