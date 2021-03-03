@@ -11,23 +11,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/othneildrew/Best-README-Template" target="blank">
     <img src="images/QuasarFireCarrier-SWR.png" alt="Quasar" width="80" height="80">
   </a>
 
   <h3 align="center">Operación Fuego de Quasar 🚀</h3>
 
   <p align="center">
-    Empezando con la API RES!
+    Empezando con la API REST!
     <br />
-    <a href="https://github.com/josarta/challengemeli" target="_blank"><strong>Ver los documentos »</strong></a>
+    <a href="https://github.com/josarta/challengemeli" target="blank"><strong>Ver los documentos »</strong></a>
     <br />
     <br />
-    <a href="https://mellich.azurewebsites.net/swagger-ui.html" target="_blank">Swagger</a>
+    <a href="https://mellich.azurewebsites.net/swagger-ui.html" target="blank">Swagger</a>
     ·
-    <a href="https://github.com/josarta/challengemeli" target="_blank">Test Api</a>
+    <a href="https://github.com/josarta/challengemeli" target="blank">Test Api</a>
     ·
-    <a href="https://github.com/josarta/challengemeli" target="_blank">Report Bug</a>
+    <a href="https://github.com/josarta/challengemeli" target="blank">Report Bug</a>
   </p>
 </p>
 
@@ -70,7 +70,7 @@
 
 ![Product Name Screen Shot][product-screenshot]
 
-Esta Api es mi solución plantea  al prueba Operación Fuego de Quasar, del cual relaciono su enunciado. 
+Esta Api es mi solución plantea Operación Fuego de Quasar, del cual relaciono su enunciado. 
 
 
 * Han Solo ha sido recientemente nombrado General de la Alianza Rebelde y busca dar un gran golpe contra el Imperio Galáctico para reavivar la llama de la resistencia.
@@ -88,7 +88,7 @@ Una vez analizado el enunciado 👀,se generon varias hipótesis para solución.
 
 * [Algoritmo](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)  Implementación de el algoritmo Levenberg–Marquardt como solución. 🥇
 * [Arquitecturas limpias](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)  (😅)  Arquitectura Hexagonal Y Mucho de DDD.
-* [Swagger](https://swagger.io/) Como parte de la documentacion se expone para prubas funcionales de la API.
+* [Swagger](https://swagger.io/) Como parte de la documentación se expone para pruebas funcionales de la API.
 * [unit testing](https://www.guru99.com/unit-testing-guide.html) Se realizan solo pruebas unitarias con una cobertura de código esperada del 85% o superior.
 
 
@@ -173,7 +173,7 @@ Ejemplos de cómo se puede utilizar un proyecto. Capturas de pantalla, Ejemplos 
 
 Ingrese a la API usando `Swagger`
    ```JS
-    http://localhost:8080/swagger-ui.html
+    https://mellich.azurewebsites.net/swagger-ui.html
    ```
 
 ![Product Name Screen Shot][all-screenshot]
@@ -359,7 +359,7 @@ En este desafío utilizo Githup por las siguientes razones versionar tu código,
 
 ![Git Name Screen Shot][git-photo]
 
-###Ramificaciones en Git 🧨
+### Ramificaciones en Git 🧨
 
 ![Ramas Name Screen Shot][ramas-photo]
 
@@ -435,6 +435,13 @@ Este proyecto está bajo la Licencia (josarta) - mira el archivo [LICENSE.md](LI
 
 ### Documentación de referencia
 
+"Collection Postman"
+
+![Collection Screen Shot][dv-collection]
+
+
+* [Collection_documentation](https://maven.apache.org/guides/index.html)
+
 Considere las siguientes secciones:
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
@@ -488,3 +495,4 @@ Las siguientes guías ilustran cómo utilizar algunas funciones de forma concret
 [ol-photo]:images/OldModel.png
 [gd-photo]:images/gdocker.png
 [tgd-photo]:images/triggerGh.png
+[dv-collection]:images/cl.PNG
