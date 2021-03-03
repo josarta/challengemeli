@@ -137,6 +137,12 @@ Libraries and Plugins
 ### Herramientas y servicios externos 
 * [Postman ](https://www.postman.com/)  📌 - Entorno de desarrollo de API (documentación de prueba)
 
+"Collection Postman" ubicada para nuevos Back en la carpeta doc del proyecto
+
+![Collection Screen Shot][dv-collection]
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/44183c862b9e93523552)
+
 ### Instalación
 #### Ejecutando la aplicación con IDE
 Aquí hay varias formas de ejecutar una aplicación Spring Boot en su máquina local. Una forma es ejecutar el método principal en la clase com.meli.challenge.ChallengeApplication desde su IDE.
@@ -434,10 +440,6 @@ Este proyecto está bajo la Licencia (josarta) - mira el archivo [LICENSE.md](LI
 ## Extras
 
 ### Documentación de referencia
-
-"Collection Postman"
-
-![Collection Screen Shot][dv-collection]
 
 
 * [Collection_documentation](https://maven.apache.org/guides/index.html)
