@@ -4,6 +4,8 @@ import com.meli.challenge.ship.application.response.GetShipResponse;
 import com.meli.challenge.ship.application.resquest.GetShipRequest;
 import com.meli.challenge.ship.domain.service.DomainShipService;
 import com.meli.challenge.ship.domain.service.ShipService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -18,6 +20,7 @@ import static com.meli.challenge.constant.ConstantChallenge.*;
 
 @RestController
 @RequestMapping("/location")
+@Api(value="ShipApi", description="Nivel 1 Exposición del método desde el dominio que responde  a  -> func GetLocation(distances ...float32) (x, y float32)")
 public class ShipController {
 
     private  final ShipService shipService;
@@ -32,6 +35,7 @@ public class ShipController {
     public ShipController(ShipService shipService) {
         this.shipService = shipService;
     }
+
 
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     GetShipResponse getShipResponse(@RequestBody final GetShipRequest getShipRequest)  {

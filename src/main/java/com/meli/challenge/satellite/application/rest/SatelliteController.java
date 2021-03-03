@@ -6,6 +6,7 @@ import com.meli.challenge.message.domain.exception.NoDataFoundException;
 import com.meli.challenge.satellite.application.request.GetSatelliteRequest;
 import com.meli.challenge.satellite.application.response.GetSatelliteResponse;
 import com.meli.challenge.satellite.domain.service.SatelliteService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -18,6 +19,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/topsecret")
+@Api(value="SatelliteApi", description="Nivel 2 Crear una API REST,  en donde se pueda obtener la ubicación de la nave y el mensaje que emite")
 public class SatelliteController {
 
     private final SatelliteService satelliteService;
